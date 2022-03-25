@@ -500,9 +500,9 @@ namespace BetterJoyForCemu {
             }
 
             if (battery <= 1) {
-                form.notifyIcon.Visible = true;
-                form.notifyIcon.BalloonTipText = String.Format("Controller {0} ({1}) - low battery notification!", PadId, isPro ? "Pro Controller" : (isSnes ? "SNES Controller" : (isLeft ? "Joycon Left" : "Joycon Right")));
-                form.notifyIcon.ShowBalloonTip(0);
+                //form.notifyIcon.Visible = true;
+                //form.notifyIcon.BalloonTipText = String.Format("Controller {0} ({1}) - low battery notification!", PadId, isPro ? "Pro Controller" : (isSnes ? "SNES Controller" : (isLeft ? "Joycon Left" : "Joycon Right")));
+                //form.notifyIcon.ShowBalloonTip(0);
             }
         }
 
@@ -591,7 +591,7 @@ namespace BetterJoyForCemu {
 
 
                 if (ts_en == raw_buf[1] && !isSnes) {
-                    form.AppendTextBox("Duplicate timestamp enqueued.\r\n");
+                    //form.AppendTextBox("Duplicate timestamp enqueued.\r\n");
                     DebugPrint(string.Format("Duplicate timestamp enqueued. TS: {0:X2}", ts_en), DebugType.THREADING);
                 }
                 ts_en = raw_buf[1];
